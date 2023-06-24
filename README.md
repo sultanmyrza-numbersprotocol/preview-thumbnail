@@ -14,6 +14,10 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`thumbnailFile(...)`](#thumbnailfile)
+* [`thumbnailData(...)`](#thumbnaildata)
+* [Interfaces](#interfaces)
+* [Enums](#enums)
 
 </docgen-index>
 
@@ -33,5 +37,78 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
 --------------------
+
+
+### thumbnailFile(...)
+
+```typescript
+thumbnailFile(options: ThumbnailOptions) => Promise<ThumbnailFileResult>
+```
+
+| Param         | Type                                                          |
+| ------------- | ------------------------------------------------------------- |
+| **`options`** | <code><a href="#thumbnailoptions">ThumbnailOptions</a></code> |
+
+**Returns:** <code>Promise&lt;<a href="#thumbnailfileresult">ThumbnailFileResult</a>&gt;</code>
+
+--------------------
+
+
+### thumbnailData(...)
+
+```typescript
+thumbnailData(options: ThumbnailOptions) => Promise<ThumbnailDataResult>
+```
+
+| Param         | Type                                                          |
+| ------------- | ------------------------------------------------------------- |
+| **`options`** | <code><a href="#thumbnailoptions">ThumbnailOptions</a></code> |
+
+**Returns:** <code>Promise&lt;<a href="#thumbnaildataresult">ThumbnailDataResult</a>&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### ThumbnailFileResult
+
+| Prop        | Type                |
+| ----------- | ------------------- |
+| **`value`** | <code>string</code> |
+
+
+#### ThumbnailOptions
+
+| Prop                | Type                                                |
+| ------------------- | --------------------------------------------------- |
+| **`video`**         | <code>string</code>                                 |
+| **`headers`**       | <code>{ [key: string]: string; }</code>             |
+| **`thumbnailPath`** | <code>string</code>                                 |
+| **`imageFormat`**   | <code><a href="#imageformat">ImageFormat</a></code> |
+| **`maxHeight`**     | <code>number</code>                                 |
+| **`maxWidth`**      | <code>number</code>                                 |
+| **`timeMs`**        | <code>number</code>                                 |
+| **`quality`**       | <code>number</code>                                 |
+
+
+#### ThumbnailDataResult
+
+| Prop        | Type                |
+| ----------- | ------------------- |
+| **`value`** | <code>string</code> |
+
+
+### Enums
+
+
+#### ImageFormat
+
+| Members    |
+| ---------- |
+| **`JPEG`** |
+| **`PNG`**  |
+| **`WEBP`** |
 
 </docgen-api>
